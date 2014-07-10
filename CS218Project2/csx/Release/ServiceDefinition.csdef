@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CS218Project2" schemaVersion="2013-03.2.0" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="ProjectCS218">
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" />
+      <LocalStorage name="ProjectCS218.svclog" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="CacheServiceRole" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="StorageConnectionString" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="https" port="443" certificate="CS218Project" localPort="443" />
+      <InputEndpoint name="Endpoint2" protocol="http" port="80" localPort="80" />
+    </Endpoints>
+    <Certificates>
+      <Certificate name="CS218Project" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+  <WorkerRole name="WorkerRoleCS218">
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="CS218Project" />
+      <Setting name="DataConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Endpoints />
+    <Certificates>
+      <Certificate name="CS218Project" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WorkerRole>
+</ServiceDefinition>

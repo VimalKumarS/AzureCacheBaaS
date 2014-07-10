@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PackageProfile>Cloud</PackageProfile>
+    <PackageSolutionConfiguration>Release</PackageSolutionConfiguration>
+    <PackageEnableRemoteDesktop>False</PackageEnableRemoteDesktop>
+    <ActivePublishProfile>CS218Production</ActivePublishProfile>
+    <WebRoleSkipLaunchInBrowser>
+    </WebRoleSkipLaunchInBrowser>
+    <UseIISExpress>False</UseIISExpress>
+    <UseEmulatorExpress>False</UseEmulatorExpress>
+    <WebRoleHttpsSkipLaunchInBrowser>ProjectCS218</WebRoleHttpsSkipLaunchInBrowser>
+    <RemoteDesktopMoreOptions>False</RemoteDesktopMoreOptions>
+  </PropertyGroup>
+</Project>
